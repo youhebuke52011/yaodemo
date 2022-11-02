@@ -1,0 +1,114 @@
+{
+  "name": "实体列表",
+  "version": "1.0.0",
+  "decription": "实体列表",
+  "bind": {
+    "model": "entity",
+    "withs": {
+      "parent": {}
+    }
+  },
+  "apis": {},
+  "columns": {
+    "ID": {
+      "label": "ID",
+      "view": { "type": "label", "props": { "value": ":id" } }
+    },
+
+    "实体": {
+      "label": "实体",
+      "view": {
+        "type": "label",
+        "props": {
+          "value": ":entity"
+        }
+      },
+      "edit": {
+        "type": "input",
+        "props": {
+          "value": ":entity"
+        }
+      }
+    },
+    "min数量": {
+      "label": "min数量",
+      "view": {
+        "type": "label",
+        "props": {
+          "value": ":min"
+        }
+      },
+      "edit": {
+        "type": "input",
+        "props": {
+          "value": ":min"
+        }
+      }
+    },
+    "max数量": {
+      "label": "max数量",
+      "view": {
+        "type": "label",
+        "props": {
+          "value": ":max"
+        }
+      },
+      "edit": {
+        "type": "input",
+        "props": {
+          "value": ":max"
+        }
+      }
+    }
+  },
+  "filters": {
+    "实体": {
+      "label": "实体",
+      "bind": "where.entity.match",
+      "input": {
+        "type": "input",
+        "props": { "placeholder": "实体" }
+      }
+    }
+  },
+  "list": {
+    "primary": "id",
+    "layout": {
+      "columns": [
+        { "name": "ID", "width": 80 },
+        { "name": "实体", "width": 200 },
+        { "name": "min数量", "width": 200 },
+        { "name": "max数量", "width": 200 }
+      ],
+      "filters": [{ "name": "实体" }]
+    },
+    "actions": {
+      "pagination": { "props": { "showTotal": true } },
+      "create": {
+        "props": { "label": "添加实体" }
+      }
+    },
+    "option": { "operation": { "unfold": true } }
+  },
+  "edit": {
+    "primary": "id",
+    "layout": {
+      "fieldset": [
+        {
+          "columns": [
+            { "name": "实体", "width": 200 },
+            { "name": "min数量", "width": 200 },
+            { "name": "max数量", "width": 200 }
+          ]
+        }
+      ]
+    },
+    "actions": {
+      "cancel": {},
+      "save": {},
+      "delete": { "type": "button", "props": { "label": "Delete" } }
+    },
+    "option": { "dev": false }
+  }
+}
+

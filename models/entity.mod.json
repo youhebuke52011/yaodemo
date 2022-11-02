@@ -1,0 +1,13 @@
+
+{
+	"name": "entity",
+	"table": { "name": "entity", "comment": "entity" },
+	"columns": [
+	  { "label": "ID", "name": "id", "type": "ID", "comment": "ID","primary": true },
+	  { "label": "entity", "name": "entity", "type": "string", "unique": true },
+	  { "label": "min", "name": "min", "type": "integer" },
+    { "label": "max", "name": "max", "type": "integer" }
+	],
+	"values": [],
+	"option": { "timestamps": true, "soft_deletes": true }
+}

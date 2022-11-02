@@ -1,0 +1,63 @@
+{
+  "name": "书籍",
+  "table": {
+    "name": "book",
+    "comment": "书籍"
+  },
+  "columns": [
+    {
+      "label": "ID",
+      "name": "id",
+      "type": "ID",
+      "comment": "ID",
+      "primary": true
+    },
+    {
+      "label": "分类id",
+      "name": "category_id",
+      "type": "integer",
+      "nullable": true
+    },
+    {
+      "label": "书籍名称",
+      "name": "name",
+      "type": "string",
+      "length": 128,
+      "index": true
+    },
+    {
+      "label": "作者",
+      "name": "author",
+      "type": "string",
+      "index": true
+    },
+    {
+      "label": "出版社",
+      "name": "press",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "label": "价格",
+      "name": "price",
+      "type": "decimal",
+      "default": 0
+    }
+  ],
+  "relations": {
+    "category": {
+      "type": "hasOne",
+      "model": "category",
+      "key": "id",
+      "foreign": "category_id",
+      "query": {}
+    }
+  },
+  "option": {
+    "timestamps": true,
+    "soft_deletes": true
+  },
+  "values": [
+  ]
+}
+

@@ -1,0 +1,217 @@
+{
+    "name": "小部件列表",
+    "version": "1.0.0",
+    "decription": "小部件列表",
+    "bind": {
+      "model": "little",
+      "withs": {
+        "parent": {}
+      }
+    },
+    "apis": {},
+    "columns": {
+      "ID": {
+        "label": "ID",
+        "view": { "type": "label", "props": { "value": ":id" } }
+      },
+  
+      "资源ID": {
+        "label": "资源ID",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":resource_id"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":resource_id"
+          }
+        }
+      },
+      "实体类型": {
+        "label": "实体类型",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":entity_type"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":entity_type"
+          }
+        }
+      },
+      "名称": {
+        "label": "名称",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":name"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":name"
+          }
+        }
+      },
+      "放置上限": {
+        "label": "放置上限",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":limit"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":limit"
+          }
+        }
+      },
+      "重叠限制": {
+        "label": "重叠限制",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":conflict_limit"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":conflict_limit"
+          }
+        }
+      },
+      "最小缩放量": {
+        "label": "最小缩放量",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":min_scale"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":min_scale"
+          }
+        }
+      },
+      "最大缩放量": {
+        "label": "最大缩放量",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":max_scale"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":max_scale"
+          }
+        }
+      },
+      "是否不可移动": {
+        "label": "是否不可移动",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":unmovable"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":unmovable"
+          }
+        }
+      },
+      "资源路径": {
+        "label": "资源路径",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":prefab_path"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":prefab_path"
+          }
+        }
+      }
+    },
+    "filters": {
+      "名称": {
+        "label": "name",
+        "bind": "where.name.match",
+        "input": {
+          "type": "input",
+          "props": { "placeholder": "小部件名称" }
+        }
+      }
+    },
+    "list": {
+      "primary": "id",
+      "layout": {
+        "columns": [
+          { "name": "ID", "width": 50 },
+          { "name": "资源ID", "width": 80 },
+          { "name": "实体类型", "width": 100 },
+          { "name": "名称", "width": 50 },
+          { "name": "放置上限", "width": 100 },
+          { "name": "重叠限制", "width": 100 },
+          { "name": "最小缩放量", "width": 120 },
+          { "name": "最大缩放量", "width": 120 },
+          { "name": "是否不可移动", "width": 120 },
+          { "name": "资源路径", "width": 250 }
+        ],
+        "filters": [{ "name": "名称" }]
+      },
+      "actions": {
+        "pagination": { "props": { "showTotal": true } },
+        "create": {
+          "props": { "label": "添加小部件" }
+        }
+      },
+      "option": { "operation": { "unfold": true } }
+    },
+    "edit": {
+      "primary": "id",
+      "layout": {
+        "fieldset": [
+          {
+            "columns": [
+                { "name": "资源ID", "width": 80 },
+                { "name": "实体类型", "width": 100 },
+                { "name": "名称", "width": 50 },
+                { "name": "放置上限", "width": 100 },
+                { "name": "重叠限制", "width": 100 },
+                { "name": "最小缩放量", "width": 120 },
+                { "name": "最大缩放量", "width": 120 },
+                { "name": "是否不可移动", "width": 120 },
+                { "name": "资源路径", "width": 250 }
+            ]
+          }
+        ]
+      },
+      "actions": {
+        "cancel": {},
+        "save": {},
+        "delete": { "type": "button", "props": { "label": "Delete" } }
+      },
+      "option": { "dev": false }
+    }
+  }
+  
+  
