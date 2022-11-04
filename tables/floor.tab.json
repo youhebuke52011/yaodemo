@@ -1,0 +1,114 @@
+{
+  "name": "地板列表",
+  "version": "1.0.0",
+  "decription": "地板列表",
+  "bind": {
+    "model": "floor",
+    "withs": {
+      "parent": {}
+    }
+  },
+  "apis": {},
+  "columns": {
+    "ID": {
+      "label": "ID",
+      "view": { "type": "label", "props": { "value": ":id" } }
+    },
+
+    "地板": {
+      "label": "地板",
+      "view": {
+        "type": "label",
+        "props": {
+          "value": ":name"
+        }
+      },
+      "edit": {
+        "type": "input",
+        "props": {
+          "value": ":name"
+        }
+      }
+    },
+    "resource_id": {
+      "label": "resource_id",
+      "view": {
+        "type": "label",
+        "props": {
+          "value": ":resource_id"
+        }
+      },
+      "edit": {
+        "type": "input",
+        "props": {
+          "value": ":resource_id"
+        }
+      }
+    },
+    "resource_url": {
+      "label": "resource_url",
+      "view": {
+        "type": "label",
+        "props": {
+          "value": ":url"
+        }
+      },
+      "edit": {
+        "type": "input",
+        "props": {
+          "value": ":url"
+        }
+      }
+    }
+  },
+  "filters": {
+    "地板": {
+      "label": "地板",
+      "bind": "where.floor.match",
+      "input": {
+        "type": "input",
+        "props": { "placeholder": "地板名称" }
+      }
+    }
+  },
+  "list": {
+    "primary": "id",
+    "layout": {
+      "columns": [
+        { "name": "ID", "width": 80 },
+        { "name": "地板", "width": 100 },
+        { "name": "resource_id", "width": 100 },
+        { "name": "resource_url", "width": 200 }
+      ],
+      "filters": [{ "name": "地板" }]
+    },
+    "actions": {
+      "pagination": { "props": { "showTotal": true } },
+      "create": {
+        "props": { "label": "添加地板" }
+      }
+    },
+    "option": { "operation": { "unfold": true } }
+  },
+  "edit": {
+    "primary": "id",
+    "layout": {
+      "fieldset": [
+        {
+          "columns": [
+            { "name": "地板", "width": 100 },
+            { "name": "resource_id", "width": 100 },
+            { "name": "resource_url", "width": 200 }
+          ]
+        }
+      ]
+    },
+    "actions": {
+      "cancel": {},
+      "save": {},
+      "delete": { "type": "button", "props": { "label": "Delete" } }
+    },
+    "option": { "dev": false }
+  }
+}
+

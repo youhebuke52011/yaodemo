@@ -1,0 +1,18 @@
+
+{
+	"name": "room",
+	"table": { "name": "room", "comment": "room" },
+	"columns": [
+	  { "label": "ID", "name": "id", "type": "ID", "comment": "ID","primary": true,"length": 20 },
+	  { "label": "name", "name": "name", "type": "string","length": 32 },
+	  { "label": "resource_id", "name": "resource_id", "type": "string", "unique": true,"length": 32 },
+      { "label": "entity_type", "name": "entity_type", "type": "integer"},
+	  { "label": "entry_type", "name": "entry_type", "type": "integer"},
+	  { "label": "tab_id", "name": "tab_id", "type": "integer"},
+      { "label": "begin_time", "name": "begin_time", "type": "string","length": 32},
+	  { "label": "end_time", "name": "end_time", "type": "string","length": 32},
+      { "label": "icon", "name": "icon", "type": "string","length": 200 }
+	],
+	"values": [],
+	"option": { "timestamps": true, "soft_deletes": true }
+}											

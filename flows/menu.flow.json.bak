@@ -1,0 +1,66 @@
+{
+  "label": "System Menu",
+  "version": "1.0.0",
+  "description": "Initialize system menu",
+  "nodes": [],
+  "output": [
+    {
+      "blocks": 0,
+      "icon": "icon-grid",
+      "id": 1,
+      "name": "配置中心",
+      "parent": null,
+      "path": "/table/entity",
+      "visible_menu": 1,
+      "children": [
+        {
+          "blocks": 1,
+          "icon": "icon-grid",
+          "name": "实体",
+          "id": 2010,
+          "parent": 1,
+          "path": "/table/entity",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-grid",
+          "name": "小部件",
+          "id": 2023,
+          "parent": 1,
+          "path": "/table/little",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 1,
+          "icon": "icon-grid",
+          "name": "地板",
+          "id": 2023,
+          "parent": 1,
+          "path": "/table/floor",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-grid",
+          "name": "房间背包",
+          "id": 2023,
+          "parent": 1,
+          "path": "/table/room",
+          "visible_menu": 1
+        },
+        {
+          "blocks": 0,
+          "icon": "icon-grid",
+          "name": "CMS链接",
+          "id": 2021,
+          "parent": 1,
+          "path": "/table/cms",
+          "visible_menu": 1
+        }
+      ]
+    }
+  ]
+}
+
+

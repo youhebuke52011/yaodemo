@@ -28,46 +28,68 @@
         [
           [
             1,
-            "分类管理",
-            "/table/category",
-            "icon-grid",
-            1,
-            "disabled",
-            null,
-            0,
-            0
-          ],
-          [
-            2,
-            "书籍列表",
-            "/table/book",
-            "icon-database",
-            1,
-            "disabled",
-            null,
-            1,
-            0
-          ],
-          [
-            3,
-            "实体配置",
+            "配置中心",
             "/table/entity",
             "icon-grid",
             1,
             "enabled",
             null,
-            0,
+            1,
             0
           ],
           [
-            4,
+            2010,
+            "实体配置",
+            "/table/entity",
+            "icon-grid",
+            1,
+            "enabled",
+            1,
+            1,
+            0
+          ],
+          [
+            2011,
             "小部件配置",
             "/table/little",
             "icon-grid",
             1,
             "enabled",
-            null,
-            0,
+            1,
+            1,
+            0
+          ],
+          [
+            2012,
+            "地板配置",
+            "/table/floor",
+            "icon-grid",
+            1,
+            "enabled",
+            1,
+            1,
+            0
+          ],
+          [
+            2013,
+            "房间背包配置",
+            "/table/room",
+            "icon-grid",
+            1,
+            "enabled",
+            1,
+            1,
+            0
+          ],
+          [
+            2014,
+            "CMS链接配置",
+            "/table/cms",
+            "icon-grid",
+            1,
+            "enabled",
+            1,
+            1,
             0
           ]      
         ]

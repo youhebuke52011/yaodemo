@@ -1,0 +1,114 @@
+{
+  "name": "CMS链接列表",
+  "version": "1.0.0",
+  "decription": "CMS链接列表",
+  "bind": {
+    "model": "cms",
+    "withs": {
+      "parent": {}
+    }
+  },
+  "apis": {},
+  "columns": {
+    "ID": {
+      "label": "ID",
+      "view": { "type": "label", "props": { "value": ":id" } }
+    },
+
+    "名称": {
+      "label": "名称",
+      "view": {
+        "type": "label",
+        "props": {
+          "value": ":name"
+        }
+      },
+      "edit": {
+        "type": "input",
+        "props": {
+          "value": ":name"
+        }
+      }
+    },
+    "位置": {
+      "label": "位置",
+      "view": {
+        "type": "label",
+        "props": {
+          "value": ":location"
+        }
+      },
+      "edit": {
+        "type": "input",
+        "props": {
+          "value": ":location"
+        }
+      }
+    },
+    "链接": {
+      "label": "链接",
+      "view": {
+        "type": "label",
+        "props": {
+          "value": ":url"
+        }
+      },
+      "edit": {
+        "type": "input",
+        "props": {
+          "value": ":url"
+        }
+      }
+    }
+  },
+  "filters": {
+    "名称": {
+      "label": "名称",
+      "bind": "where.name.match",
+      "input": {
+        "type": "input",
+        "props": { "placeholder": "名称" }
+      }
+    }
+  },
+  "list": {
+    "primary": "id",
+    "layout": {
+      "columns": [
+        { "name": "ID", "width": 50 },
+        { "name": "名称", "width": 100 },
+        { "name": "位置", "width": 300 },
+        { "name": "链接", "width": 200 }
+      ],
+      "filters": [{ "name": "名称" }]
+    },
+    "actions": {
+      "pagination": { "props": { "showTotal": true } },
+      "create": {
+        "props": { "label": "添加CMS链接" }
+      }
+    },
+    "option": { "operation": { "unfold": true } }
+  },
+  "edit": {
+    "primary": "id",
+    "layout": {
+      "fieldset": [
+        {
+          "columns": [
+            { "name": "名称", "width": 100 },
+            { "name": "位置", "width": 300 },
+            { "name": "链接", "width": 200 }
+          ]
+        }
+      ]
+    },
+    "actions": {
+      "cancel": {},
+      "save": {},
+      "delete": { "type": "button", "props": { "label": "Delete" } }
+    },
+    "option": { "dev": false }
+  }
+}
+

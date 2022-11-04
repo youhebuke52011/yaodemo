@@ -3,7 +3,7 @@
 	"name": "little",
 	"table": { "name": "little", "comment": "little" },
 	"columns": [
-	  { "label": "ID", "name": "id", "type": "ID", "comment": "ID","primary": true },
+	  { "label": "ID", "name": "id", "type": "ID", "comment": "ID","primary": true,"length": 20 },
 	  { "label": "resource_id", "name": "resource_id", "type": "string", "unique": true,"length": 32 },
       { "label": "entity_type", "name": "entity_type", "type": "integer"},
       { "label": "name", "name": "name", "type": "string","length": 64},
