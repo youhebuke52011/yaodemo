@@ -1,7 +1,7 @@
 {
-  "name": "实体列表",
+  "name": "实体类型列表",
   "version": "1.0.0",
-  "decription": "实体列表",
+  "decription": "实体类型列表",
   "bind": {
     "model": "entity",
     "withs": {
@@ -15,18 +15,18 @@
       "view": { "type": "label", "props": { "value": ":id" } }
     },
 
-    "实体": {
-      "label": "实体",
+    "实体类型": {
+      "label": "实体类型",
       "view": {
         "type": "label",
         "props": {
-          "value": ":entity"
+          "value": ":name"
         }
       },
       "edit": {
         "type": "input",
         "props": {
-          "value": ":entity"
+          "value": ":name"
         }
       }
     },
@@ -62,12 +62,12 @@
     }
   },
   "filters": {
-    "实体": {
-      "label": "实体",
-      "bind": "where.entity.match",
+    "实体类型": {
+      "label": "实体类型",
+      "bind": "where.name.match",
       "input": {
         "type": "input",
-        "props": { "placeholder": "实体" }
+        "props": { "placeholder": "实体类型" }
       }
     }
   },
@@ -76,16 +76,16 @@
     "layout": {
       "columns": [
         { "name": "ID", "width": 80 },
-        { "name": "实体", "width": 200 },
+        { "name": "实体类型", "width": 200 },
         { "name": "min数量", "width": 200 },
         { "name": "max数量", "width": 200 }
       ],
-      "filters": [{ "name": "实体" }]
+      "filters": [{ "name": "实体类型" }]
     },
     "actions": {
       "pagination": { "props": { "showTotal": true } },
       "create": {
-        "props": { "label": "添加实体" }
+        "props": { "label": "添加实体类型" }
       }
     },
     "option": { "operation": { "unfold": true } }
@@ -96,7 +96,7 @@
       "fieldset": [
         {
           "columns": [
-            { "name": "实体", "width": 200 },
+            { "name": "实体类型", "width": 200 },
             { "name": "min数量", "width": 200 },
             { "name": "max数量", "width": 200 }
           ]

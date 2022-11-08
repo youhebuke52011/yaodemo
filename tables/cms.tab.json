@@ -48,7 +48,7 @@
     "链接": {
       "label": "链接",
       "view": {
-        "type": "label",
+        "type": "a",
         "props": {
           "value": ":url"
         }

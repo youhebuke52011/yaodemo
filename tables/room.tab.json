@@ -5,7 +5,8 @@
     "bind": {
       "model": "room",
       "withs": {
-        "parent": {}
+        "entity": {},
+        "backpack": {}
       }
     },
     "apis": {},
@@ -50,13 +51,18 @@
         "view": {
           "type": "label",
           "props": {
-            "value": ":entity_type"
+            "value": ":entity.name"
           }
         },
         "edit": {
-          "type": "input",
+          "type": "treeSelect",
           "props": {
-            "value": ":entity_type"
+            "value": ":entity_type",
+            "allowClear": true,
+            "remote": {
+              "api": "/api/select/entity",
+              "query": { "select": ["id", "name"] }
+            }
           }
         }
       },
@@ -75,18 +81,23 @@
           }
         }
       },
-      "tab_id": {
-        "label": "tab_id",
+      "房间背包": {
+        "label": "房间背包",
         "view": {
           "type": "label",
           "props": {
-            "value": ":tab_id"
+            "value": ":backpack.name"
           }
         },
         "edit": {
-          "type": "input",
+          "type": "treeSelect",
           "props": {
-            "value": ":tab_id"
+            "value": ":backpack_id",
+            "allowClear": true,
+            "remote": {
+              "api": "/api/select/backpack",
+              "query": { "select": ["id", "name"] }
+            }
           }
         }
       },
@@ -99,7 +110,7 @@
           }
         },
         "edit": {
-          "type": "input",
+          "type": "datePicker",
           "props": {
             "value": ":begin_time"
           }
@@ -114,7 +125,7 @@
           }
         },
         "edit": {
-          "type": "input",
+          "type": "datePicker",
           "props": {
             "value": ":end_time"
           }
@@ -123,7 +134,7 @@
       "icon": {
         "label": "icon",
         "view": {
-          "type": "image",
+          "type": "a",
           "props": {
             "value": ":icon"
           }
@@ -142,7 +153,7 @@
         "bind": "where.name.match",
         "input": {
           "type": "input",
-          "props": { "placeholder": "房间背包名称" }
+          "props": { "placeholder": "房间背包部件名称" }
         }
       }
     },
@@ -155,10 +166,10 @@
           { "name": "资源ID", "width": 100 },
           { "name": "实体类型", "width": 100 },
           { "name": "entry类型", "width": 100 },
-          { "name": "tab_id", "width": 100 },
-          { "name": "上架时间", "width": 150 },
-          { "name": "下架时间", "width": 150 },
-          { "name": "icon", "width": 250 }
+          { "name": "房间背包", "width": 100 },
+          { "name": "上架时间", "width": 200 },
+          { "name": "下架时间", "width": 200 },
+          { "name": "icon", "width": 200 }
         ],
         "filters": [{ "name": "名称" }]
       },
@@ -180,10 +191,10 @@
               { "name": "资源ID", "width": 100 },
               { "name": "实体类型", "width": 100 },
               { "name": "entry类型", "width": 100 },
-              { "name": "tab_id", "width": 100 },
-              { "name": "上架时间", "width": 100 },
-              { "name": "下架时间", "width": 100 },
-              { "name": "icon", "width": 250 }
+              { "name": "房间背包", "width": 100 },
+              { "name": "上架时间", "width": 200 },
+              { "name": "下架时间", "width": 200 },
+              { "name": "icon", "width": 200 }
             ]
           }
         ]

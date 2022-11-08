@@ -5,7 +5,7 @@
     "bind": {
       "model": "little",
       "withs": {
-        "parent": {}
+        "entity": {}
       }
     },
     "apis": {},
@@ -35,13 +35,18 @@
         "view": {
           "type": "label",
           "props": {
-            "value": ":entity_type"
+            "value": ":entity.name"
           }
         },
         "edit": {
-          "type": "input",
+          "type": "treeSelect",
           "props": {
-            "value": ":entity_type"
+            "value": ":entity_type",
+            "allowClear": true,
+            "remote": {
+              "api": "/api/select/entity",
+              "query": { "select": ["id", "name"] }
+            }
           }
         }
       },
@@ -84,9 +89,13 @@
           }
         },
         "edit": {
-          "type": "input",
+          "type": "select",
           "props": {
-            "value": ":conflict_limit"
+          "value": ":conflict_limit",
+          "options": [
+            { "label": "false", "value": "false" },
+            { "label": "true", "value": "true" }
+          ]
           }
         }
       },
@@ -129,9 +138,13 @@
           }
         },
         "edit": {
-          "type": "input",
+          "type": "select",
           "props": {
-            "value": ":unmovable"
+          "value": ":unmovable",
+          "options": [
+            { "label": "false", "value": "false" },
+            { "label": "true", "value": "true" }
+          ]
           }
         }
       },
@@ -165,8 +178,8 @@
       "primary": "id",
       "layout": {
         "columns": [
-          { "name": "ID", "width": 50 },
-          { "name": "资源ID", "width": 80 },
+          { "name": "ID", "width": 100 },
+          { "name": "资源ID", "width": 100 },
           { "name": "实体类型", "width": 100 },
           { "name": "名称", "width": 50 },
           { "name": "放置上限", "width": 100 },
@@ -192,7 +205,7 @@
         "fieldset": [
           {
             "columns": [
-                { "name": "资源ID", "width": 80 },
+                { "name": "资源ID", "width": 100 },
                 { "name": "实体类型", "width": 100 },
                 { "name": "名称", "width": 50 },
                 { "name": "放置上限", "width": 100 },

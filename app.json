@@ -1,6 +1,7 @@
 {
 	"name": "Yao",
 	"short": "Yao",
+	"version": "1.0.0",
 	"description": "Another yao app",
 	"option": {
 	  "nav_user": "xiang.user",

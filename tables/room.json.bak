@@ -1,0 +1,211 @@
+{
+    "name": "房间背包列表",
+    "version": "1.0.0",
+    "decription": "房间背包列表",
+    "bind": {
+      "model": "room",
+      "withs": {
+        "entity": {},
+        "backpack": {}
+      }
+    },
+    "apis": {},
+    "columns": {
+      "ID": {
+        "label": "ID",
+        "view": { "type": "label", "props": { "value": ":id" } }
+      },
+  
+      "物品名称": {
+        "label": "物品名称",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":name"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":name"
+          }
+        }
+      },
+      "资源ID": {
+        "label": "资源ID",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":resource_id"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":resource_id"
+          }
+        }
+      },
+      "实体类型": {
+        "label": "实体类型",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":entity.name"
+          }
+        },
+        "edit": {
+          "type": "treeSelect",
+          "props": {
+            "value": ":entity_type",
+            "allowClear": true,
+            "remote": {
+              "api": "/api/select/entity",
+              "query": { "select": ["id", "name"] }
+            }
+          }
+        }
+      },
+      "entry类型": {
+        "label": "entry类型",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":entry_type"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":entry_type"
+          }
+        }
+      },
+      "房间背包": {
+        "label": "房间背包",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":backpack.name"
+          }
+        },
+        "edit": {
+          "type": "treeSelect",
+          "props": {
+            "value": ":backpack_id",
+            "allowClear": true,
+            "remote": {
+              "api": "/api/select/backpack",
+              "query": { "select": ["id", "name"] }
+            }
+          }
+        }
+      },
+      "上架时间": {
+        "label": "上架时间",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":begin_time"
+          }
+        },
+        "edit": {
+          "type": "datePicker",
+          "props": {
+            "value": ":begin_time"
+          }
+        }
+      },
+      "下架时间": {
+        "label": "下架时间",
+        "view": {
+          "type": "datePicker",
+          "props": {
+            "value": ":end_time"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":end_time"
+          }
+        }
+      },
+      "icon": {
+        "label": "icon",
+        "view": {
+          "type": "a",
+          "props": {
+            "value": ":icon"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":icon"
+          }
+        }
+      }
+    },
+    "filters": {
+      "名称": {
+        "label": "name",
+        "bind": "where.name.match",
+        "input": {
+          "type": "input",
+          "props": { "placeholder": "房间背包部件名称" }
+        }
+      }
+    },
+    "list": {
+      "primary": "id",
+      "layout": {
+        "columns": [
+          { "name": "ID", "width": 80 },
+          { "name": "物品名称", "width": 100 },
+          { "name": "资源ID", "width": 100 },
+          { "name": "实体类型", "width": 100 },
+          { "name": "entry类型", "width": 100 },
+          { "name": "房间背包", "width": 100 },
+          { "name": "上架时间", "width": 150 },
+          { "name": "下架时间", "width": 150 },
+          { "name": "icon", "width": 250 }
+        ],
+        "filters": [{ "name": "名称" }]
+      },
+      "actions": {
+        "pagination": { "props": { "showTotal": true } },
+        "create": {
+          "props": { "label": "添加房间背包" }
+        }
+      },
+      "option": { "operation": { "unfold": true } }
+    },
+    "edit": {
+      "primary": "id",
+      "layout": {
+        "fieldset": [
+          {
+            "columns": [
+              { "name": "物品名称", "width": 100 },
+              { "name": "资源ID", "width": 100 },
+              { "name": "实体类型", "width": 100 },
+              { "name": "entry类型", "width": 100 },
+              { "name": "房间背包", "width": 100 },
+              { "name": "上架时间", "width": 100 },
+              { "name": "下架时间", "width": 100 },
+              { "name": "icon", "width": 250 }
+            ]
+          }
+        ]
+      },
+      "actions": {
+        "cancel": {},
+        "save": {},
+        "delete": { "type": "button", "props": { "label": "Delete" } }
+      },
+      "option": { "dev": false }
+    }
+  }
+  
+  
