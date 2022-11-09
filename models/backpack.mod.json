@@ -1,7 +1,7 @@
 
 {
 	"name": "backpack",
-	"table": { "name": "backpack", "comment": "backpack" },
+	"table": { "name": "entity_backpack_tab", "comment": "backpack" },
 	"columns": [
 	  { "label": "ID", "name": "id", "type": "ID", "comment": "ID","primary": true },
 	  { "label": "name", "name": "name", "type": "string" }
