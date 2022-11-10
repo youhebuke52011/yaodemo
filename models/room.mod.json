@@ -11,7 +11,8 @@
 	  { "label": "backpack_id", "name": "backpack_id", "type": "integer"},
       { "label": "begin_time", "name": "begin_time", "type": "timestamp","length": 32},
 	  { "label": "end_time", "name": "end_time", "type": "timestamp","length": 32},
-      { "label": "icon", "name": "icon", "type": "string","length": 200 }
+      { "label": "icon", "name": "icon", "type": "string","length": 200 },
+	  { "label": "related_set", "name": "related_set", "type": "string","default": "","length": 250 }
 	],
 	"values": [],
 	"relations": {

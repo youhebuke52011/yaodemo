@@ -145,6 +145,21 @@
             "value": ":icon"
           }
         }
+      },
+      "related_set": {
+        "label": "related_set",
+        "view": {
+          "type": "label",
+          "props": {
+            "value": ":related_set"
+          }
+        },
+        "edit": {
+          "type": "input",
+          "props": {
+            "value": ":related_set"
+          }
+        }
       }
     },
     "filters": {
@@ -169,7 +184,8 @@
           { "name": "房间背包", "width": 100 },
           { "name": "上架时间", "width": 200 },
           { "name": "下架时间", "width": 200 },
-          { "name": "icon", "width": 200 }
+          { "name": "icon", "width": 200 },
+          { "name": "related_set", "width": 100 }
         ],
         "filters": [{ "name": "名称" }]
       },
@@ -194,7 +210,8 @@
               { "name": "房间背包", "width": 100 },
               { "name": "上架时间", "width": 200 },
               { "name": "下架时间", "width": 200 },
-              { "name": "icon", "width": 200 }
+              { "name": "icon", "width": 200 },
+              { "name": "related_set", "width": 100 }
             ]
           }
         ]
